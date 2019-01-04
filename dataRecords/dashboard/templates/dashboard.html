@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <a href="/logout">Logout</a>
+    {% for user in users %}
+        <h1>{{user.name}}</h1>
+        <h6>{{ user.user_id }}</h6>
+    {% endfor %}
+</body>
+</html>

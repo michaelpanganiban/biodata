@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html class="frontend">
+    <head>
+        {% load static %}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Fluffy - Log In</title>
+        <meta name="author" content="pampersdry.info">
+        <meta name="description" content="Adminre is a clean and flat backend and frontend theme build with twitter bootstrap 3.1.1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% static '/image/touch/apple-touch-icon-144x144-precomposed.png' %}">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{% static '/image/touch/apple-touch-icon-114x114-precomposed.png' %}">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static '/image/touch/apple-touch-icon-72x72-precomposed.png' %}">
+        <link rel="apple-touch-icon-precomposed" href="{% static '/image/touch/apple-touch-icon-57x57-precomposed.png' %}">
+        <link rel="shortcut icon" href="{% static '/assets/image/fluffylogo.png' %}">
+        <link rel="stylesheet" href="{% static '/assets/plugins/owl/css/owl.carousel.min.css'%}">
+        <link rel="stylesheet" href="{% static '/assets/library/bootstrap/css/bootstrap.min.css'%}">
+        <link rel="stylesheet" href="{% static '/assets/stylesheet/layout.css'%}">
+        <link rel="stylesheet" href="{% static '/assets/stylesheet/uielement.css'%}">
+        <link rel="stylesheet" href="{% static '/assets/alertifyjs/css/alertify.min.css'%}">
+        <link rel="stylesheet" href="{% static '/assets/alertifyjs/css/themes/default.min.css'%}"/>
+        <script src="{% static '/assets/library/modernizr/js/modernizr.min.js'%}"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+        <style type="text/css">
+            .app-logo{
+                background-image: url("{% static '/assets/image/fluffylogo.png' %}");
+                background-repeat: no-repeat;
+                background-position: -45px 8px;
+                background-size: 250px 190px;
+                display: inline-block;
+                vertical-align: top;
+                text-decoration: none;
+                height: 171px;
+                width: 180px;
+                margin-bottom: 35px;
+                margin-top: -5px;
+
+            }
+        </style>
+    </head>
+    <body>
+        <header id="header" class="navbar navbar-fixed-top" style="background:#141d26; border-bottom: 3px solid #428bca;">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="javascript:void(0);">
+                        <h4 style="color:#fff; margin-left: -80px; font-size: 28px; font-family: 'Times New Roman', Times, serif;" class="font-alt">Fluffy</h4>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <section id="main" role="main">
+            <section class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-lg-offset-4">
+                        <div class="text-center">
+                            <span class="app-logo"></span>
+                            <h5 class="semibold text-muted mt-5">Sign in to your account.</h5>
+                        </div>
+                        <hr>
+                        <form class="panel"  id="submit-me" method="POST" name="form-login" action="">
+                            {% csrf_token %}
+                            <div class="panel-body">
+                               <!--  <div class="alert alert-warning">
+                                    <span class="semibold">Note :</span>&nbsp;&nbsp;Just put anything and hit 'sign-in' button.
+                                </div> -->
+                                <div class="form-group">
+                                    <div class="form-stack has-icon pull-left">
+                                        <input name="username" id="username" type="text" class="form-control input-lg" placeholder="Username" data-parsley-errors-container="#error-container" data-parsley-error-message="Please fill in your username" data-parsley-required autofocus>
+                                        <i class="ico-user2 form-control-icon"></i>
+                                    </div>
+                                    <div class="form-stack has-icon pull-left">
+                                        <input name="password" id="password" type="password" class="form-control input-lg" placeholder="Password" data-parsley-errors-container="#error-container" data-parsley-error-message="Please fill in your password" data-parsley-required>
+                                        <i class="ico-lock2 form-control-icon"></i>
+                                    </div>
+                                </div>
+                                <div id="error-container"class="mb15"></div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <div class="checkbox custom-checkbox">
+                                                <input type="checkbox" name="remember" id="remember" value="1">
+                                                <label for="remember">&nbsp;&nbsp;Remember me</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 text-right">
+                                            <a href="javascript:void(0);">Lost password?</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group nm">
+                                    <button type="submit" class="btn btn-block" style="background-color: #141d26"><span class="semibold text-default">Sign In</span></button>
+                                </div>
+                            </div>
+                        </form>
+                        <hr>
+                        <!-- <p class="text-muted text-center">Don't have any account? <a class="semibold" href="page-register.html">Sign up to get started</a></p> -->
+                    </div>
+                </div>
+            </section>
+            <a href="#" class="totop animation" data-toggle="waypoints totop" data-showanim="bounceIn" data-hideanim="bounceOut" data-offset="50%"><i class="ico-angle-up"></i></a>
+        </section>
+
+        <script type="text/javascript" src="{% static '/assets/library/jquery/js/jquery.min.js' %}"></script>
+        <script type="text/javascript" src="{% static '/assets/library/jquery/js/jquery-migrate.min.js' %}"></script>
+        <script type="text/javascript" src="{% static '/assets/library/bootstrap/js/bootstrap.min.js' %}"></script>
+        <script type="text/javascript" src="{% static '/assets/plugins/sparkline/js/jquery.sparkline.min.js' %}"></script>
+        <script type="text/javascript" src="{% static '/assets/javascript/app-js/app-home.js' %}"></script>
+        <script type="text/javascript" src="{% static '/assets/plugins/owl/js/owl.carousel.min.js' %}"></script>
+        <script type="text/javascript" src="{% static '/assets/javascript/pages/frontend/home.js' %}"></script>
+        <script type="text/javascript" src="{% static '/assets/alertifyjs/alertify.min.js' %}"></script>
+
+    </body>
+</html>
